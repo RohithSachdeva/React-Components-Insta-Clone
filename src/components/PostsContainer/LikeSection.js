@@ -4,8 +4,14 @@
 import React, { useState } from "react";
 
 const LikeSection = props => {
+
+
+
+const increaseLikes = () => {
+  return props.likes + 1;
+};
   console.log(props);
-  const [likes, setLikes] = useState(props.likes);
+  
   return (
     <div>
     <div
@@ -13,22 +19,27 @@ const LikeSection = props => {
       key="likes-icons-container"
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" onClick={() => setLikes(likes)} />
+        <i className="far fa-heart" onClick ={increaseLikes}/>
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
       </div>
     </div>
     <p className="like-number">
-    {likes}
-    {" "}
-      likes</p>
+      {props.likes} likes</p>
 </div>
   )
 };
 
 export default LikeSection;
 
+// const [likes] = useState(props.likes)
+
+// const increaseLikes = () => {
+//   setLikes(likes => likes + 1);
+// };
+
+// onClick ={() => setLikes(likes)};
 
 //Click the heart to update likes 
 

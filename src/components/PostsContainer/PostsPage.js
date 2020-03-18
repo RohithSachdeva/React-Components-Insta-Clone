@@ -4,10 +4,11 @@ import React, {useState} from "react";
 import Post from "./Post";
 import "./Posts.css";
 // import data 
-import dummydata from "../../dummy-data"
+import dummyData from "../../dummy-data"
 const PostsPage = () => {
   // set up state for your data 
-  const [postData, setPostData] = useState(dummydata);
+  const [postData, ] = useState(dummyData);
+  console.log(postData)
   return (
     <div className="posts-container-wrapper">
       {postData.map(data => (
@@ -20,7 +21,7 @@ const PostsPage = () => {
 export default PostsPage;
 
 
-const [data] = useState(dummydata);
+
 
 //Post will use username and data
 
